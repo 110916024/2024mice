@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #060b11;
+    font-family: 'Share Tech', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none; /* Chrome, Opera, Safari */
+}
+html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+}
+
+
+.cover {
+    width: 100%;
+    height: 800px;
+    background-color: #0A1019;
+}
+.tempBlock {
+    width: 100%;
+    height: 1200px;
+    background-color: rgba(0,0,0,.5);
+}
+/* section.cover {
+    background-image: url("img/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+.logo > img {
+    height: 500px;
+    width: 500px;
+    filter: blur(.5em);
+}
+.back_text {
+    top: 30%;
+    left: 5%;
+    width: 100px;
+    font-size: 128px;
+}
+
+
+.cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.cover > div {
+    background-color: rgba(0,0,0,.5);
+    box-shadow: rgba(0,0,0,.5) 0 0 5em 5em;
+    padding: 2em;
+}
+.cover h1 {
+    font-size: 10em;
+    margin-bottom: 0.5em;
+}
+.cover p {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0 1em;
+}
+@media (max-width: 768px) {
+    .cover h1 {
+        font-size: 2em;
+    }
+    .cover p {
+        font-size: 1.2em;
+    }
+}
+
+
+/* nav */
+#nav {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 1.5em;
+    top: 0;
+    padding: 1em;
+    background-color: rgba(0,0,0,.5);
+}
+#nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0 1em;
+}
+
+
+/* text div */
+div.text {
+    padding: 1em;
+}
