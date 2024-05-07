@@ -171,10 +171,54 @@ hr::before {
 div.image_container {
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 div.member {
     display: flex;
 }
 div.member > div {
     padding: 1em;
+}
+
+
+@keyframes hovering {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, .1em, 0);
+    }
+}
+
+#product ul {
+    list-style: none;
+}
+#product li {
+    border-bottom: solid 1px white;
+    margin-bottom: 1em;
+    border-image: linear-gradient(to right, white, rgba(255,255,255,0)) 1 100%;
+    border-image-slice: 1;
+}
+#product li::before {
+    content: '';
+    background-color: rgba(255,255,255,0.1);
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    transform: translate3d(-0.5em, -0.25em, 0);
+}
+
+button {
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    padding: .5em 1em;
+    border-radius: 1em;
+    font-size: 1.5em;
+    margin: 1em;
+    
+    box-shadow: 0 0 1em rgba(255,255,255,0.3), inset 0 0 0.5em rgba(255,255,255,0.3);
+}
+button:hover {   
+    box-shadow: 0 0 1.2em rgba(255,255,255,0.3), inset 0 0 0.7em rgba(255,255,255,0.3);
 }
